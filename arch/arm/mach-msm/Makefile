@@ -27,6 +27,9 @@ obj-$(CONFIG_MSM_HW3D) += hw3d.o
 obj-$(CONFIG_PM) += pm.o
 obj-$(CONFIG_CPU_FREQ) += cpufreq.o
 
+obj-$(CONFIG_MACH_PULSE) += board-halibut.o board-halibut-panel.o
+obj-$(CONFIG_MACH_PULSE) += keypad_linux_u8220.o jogball_device.o
+obj-$(CONFIG_MACH_PULSE) += msm_vibrator.o #u8220_battery.o
 obj-$(CONFIG_MACH_HALIBUT) += board-halibut.o board-halibut-panel.o
 obj-$(CONFIG_MACH_HALIBUT) += board-halibut-keypad.o fish_battery.o
 obj-$(CONFIG_MACH_SWORDFISH) += board-swordfish.o

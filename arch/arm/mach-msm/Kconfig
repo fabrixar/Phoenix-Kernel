@@ -84,6 +84,13 @@ endchoice
 
 comment "MSM Board Type"
 
+config MACH_PULSE
+	depends on ARCH_MSM7X00A
+	default y
+	bool "T-Mobile Pulse (HUAWEI U8220)"
+	help
+	  Select the to support the T-Mobile Pulse.
+
 config MACH_HALIBUT
 	depends on ARCH_MSM7X00A
 	default y

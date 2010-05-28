@@ -14,5 +14,5 @@
  */
 
 #ifndef __ASM_ARCH_MSM_HARDWARE_H
-
+#define PCIMEM_BASE 0xf5000000
 #endif
