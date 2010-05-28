@@ -1256,6 +1256,10 @@ package-dir	:= $(srctree)/scripts/package
 	$(Q)$(MAKE) $(build)=$(package-dir) $@
 rpm: include/config/kernel.release FORCE
 	$(Q)$(MAKE) $(build)=$(package-dir) $@
+bootimg:
+	@tools/mkbootimg --cmdline "mem=128M console=ttyMSM2,115200n8 androidboot.hardware=qcom console=ttyUSBCONSOLE0 androidboot.console=ttyUSBCONSOLE0" \
+			--kernel ./arch/arm/boot/zImage --ramdisk ./tools/2.1-ramdisk.img -o ./boot.img
+	@echo "Your boot.img file is ready"
 
 
 # Brief documentation of the typical targets used
