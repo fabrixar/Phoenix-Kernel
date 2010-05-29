@@ -146,7 +146,7 @@ if [ "$MAKE_DEFCONFIG" == "1" ]; then
 	make defconfig tmobile_pulse_defconfig
 fi
 
-if [ "$M_THREADS" == "1" ]; then
+if [ "$USE_MT" == "1" ]; then
 	make CROSS_COMPILE=$TOOLCHAIN -j$NUM_THREADS
 else
 	make CROSS_COMPILE=$TOOLCHAIN
